@@ -1,12 +1,13 @@
 {
   "name": "lms-backend",
   "version": "1.0.0",
-  "main": "dist/app.js",
+  "main": "dist/src/app.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
     "build": "tsc",
-    "start": "node dist/app.js",
-    "seed": "ts-node scripts/seed.ts"
+    "start": "node dist/src/app.js",
+    "seed": "ts-node scripts/seed.ts",
+    "render-seed": "node dist/scripts/seed.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
