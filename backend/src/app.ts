@@ -44,7 +44,14 @@ app.use((_req, res) => {
   res.status(404).json({ message: 'Route not found' });
 });
 
-const PORT = process.env.PORT || 5000;
+const rawPort = process.env.PORT || '5000';
+const PORT = parseInt(rawPort, 10);
+if (Number.isNaN(PORT)) {
+  console.error('Invalid PORT environment variable:', rawPort);
+  console.error('Make sure PORT is set to a valid number and not concatenated with other env values.');
+  process.exit(1);
+}
+
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
 });
