@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #1e40af;
+  --primary-dark: #1e3a8a;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.step-active { @apply bg-blue-600 text-white; }
+.step-done   { @apply bg-green-500 text-white; }
+.step-todo   { @apply bg-gray-200 text-gray-500; }
