@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
     "build": "tsc",
+    "postbuild": "node dist/scripts/seed.js",
     "start": "node dist/src/app.js",
     "seed": "ts-node scripts/seed.ts",
     "render-seed": "node dist/scripts/seed.js"
